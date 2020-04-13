@@ -12,7 +12,7 @@ class Clients extends Component {
             balance: '30'
         },
         {
-            id: '434343434',
+            id: '665654645',
             firstName: 'Mary',
             lastName: 'McLeigh',
             email: 'MM@mail.ed.uc.uk',
@@ -26,7 +26,7 @@ class Clients extends Component {
                 <div>
                     <div className="row">
                         <div className="col-md-6">
-                            <h2><i className="fas fa-users mr-3 text-black-50"></i>Clients</h2>
+                            <h2><i className="fas fa-users mr-3 text-secondary"></i>Clients</h2>
                         </div>
                         <div className="col-md-6"></div>
                     </div>
