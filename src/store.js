@@ -37,7 +37,19 @@ const rootReducer = combineReducers({
     settings: settingsReducer
 });
 
-const initialState = {};
+// Check for settings in local storage
+if (localStorage.getItem('settings') == null) {
+    const defaultSettings = {
+        disableBalanceOnAdd: true,
+        disableBalanceOnEdit: false,
+        allowRegistration: false
+    }
+
+    // Set to local storage
+    localStorage.setItem('settings', JSON.stringify(defaultSettings));
+}
+const initialState = { settings: JSON.parse(localStorage.getItem('settings')) };
+
 const store = createStore(rootReducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // const rrfProps = {
