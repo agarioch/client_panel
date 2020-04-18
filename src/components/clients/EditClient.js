@@ -116,6 +116,9 @@ class EditClient extends Component {
     }
 }
 
+EditClient.propTypes = {
+    firestore: PropTypes.object.isRequired
+}
 export default compose(
     firestoreConnect(props => [
         { collection: 'clients', storeAs: 'client', doc: props.match.params.id }

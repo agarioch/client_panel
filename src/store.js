@@ -1,11 +1,11 @@
-import { createStore, combineReducers, compose } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import firebase from 'firebase';
 import 'firebase/firestore';
 import { firebaseReducer } from 'react-redux-firebase';
 import { firestoreReducer } from 'redux-firestore';
 
 // Reducers
-// @todo
+import notifyReducer from './reducers/notifyReducer'
 
 // react-redux-firebase config
 const firebaseConfig = {
@@ -31,7 +31,8 @@ firebase.firestore();
 
 const rootReducer = combineReducers({
     firebase: firebaseReducer,
-    firestore: firestoreReducer
+    firestore: firestoreReducer,
+    notify: notifyReducer
 });
 
 const initialState = {};

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // import { compose } from 'redux';
 // import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
-import { firestoreReducer } from 'redux-firestore';
 
 class AddClient extends Component {
     state = {
